@@ -30,12 +30,14 @@ int ex(LDPC *decoder, int error_weight, int num)
   }
   return succ;
 }
+
 int Make_Set_of_Crossover_Prob(int N, int Expected_d_min, double *arr)
 {
   for (int i = 1; i <= floor( (Expected_d_min - 1) / 2); i++)
     arr[i] = (double) i / N;
   return floor((Expected_d_min - 1) / 2);
 }
+
 int main(int argc, char *argv[])
 {
   int block_length, message_length, num_of_ones_in_each_col, num_of_ones_in_each_row, total_num_of_H, total_experiment;
